@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>caso1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet"/>
+    <style type="text/css">
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  background-image: repeating-linear-gradient(90deg, #fff, #fff 20px, white 20px, #FCF8F6  40px);
+}
+
+
+.margen {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    'header     header    header'
+    'destacado    destacado   destacado'
+    'contenido    contenido   contenido'
+    'footer     footer    footer';
+}
+
+.header {
+  grid-area: header;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+.linea1 {
+  border-top: 0.09em solid black;
+  border-bottom: 0.09em solid black;
+  font-size: 1em;
+  padding: 0.1em;
+  
+}
+.btn{
+    width: 50%;
+    height: 20%;
+    left: 60%;
+    padding: 0.5em 0.8em;
+    font-size: 20px;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #D5D5D5;
+    border: 0.5px solid black;
+}
+.p{
+   width: 17em;
+   height: 45px;
+   font-size: 35px;
+   border-radius: 35%;
+  padding: 7px;
+  font-weight: 600px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  color: #323132;
+  background-color: white;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border: 3px solid #6D7993 ;
+
+}
+.btn1 {
+    width: 50%;
+    height: 13%;
+    padding: 0.5em 0.8em;
+    font-size: 20px;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #F1DFE7;
+    border: 0.5px solid black;
+}
+
+.cua {
+  background: #fff;
+  height: 70%;
+  width: 120%;
+  color: #3D266A;
+  box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+  padding: 1em 1em;
+  font-size: 23px;
+}
+
+	</style>
+</head>
+<body >
+	<div class="margen">
+      <header class="header">
+        <h1><center>PRACTICA UN POCO PARA ENTENDER MEJOR</center></h1>
+        <center><p class="linea1"><a href="practico.html"><button class="btn">VOLVER ATRAS</button></a></p></center>
+      </header>
+<form>
+	<input type="text" class="p" id="n1" placeholder="NUMERO 1 (TIENE QUE SER EL MENOR)"><br><br>
+	<input type="text" class="p" id="n2" placeholder="NUMERO 2 (TIENE QUE SER DEL MEDIO)"><br><br>
+	<input type="text" class="p"id="n3" placeholder="NUMERO 3 (TIENE QUE SER EL MAYOR)"><br><br>
+	<input type="text" class="p"id="an" placeholder="DIGITE LA POSICION QUE QUIERE HALLAR"><br><br>
+	<input type="button" class="btn1" value="VER" onclick="caso1()">
+</form>
+<article class="cua">
+<div id="progre"><b>an=</b></div><br><br>
+<div id="form"><b>FORMULA ESPECÍFICA:</b></div><br><br>
+<div id="nums"><b>PROGRESIÓN:</b></div></div>       
+</article></div>
+
+
+<script>
+	function caso1(){
+	v1=parseInt(n1.value);
+	v2=parseInt(n2.value);
+	v3=parseInt(n3.value);
+	ann=parseInt(an.value);
+	d=v2-v1;
+	anr=v1+(ann-1)*d;
+	progre.innerHTML="<b>an= </b>"+anr;
+	form.innerHTML="<b>FORMULA ESPECÍFICA: </b>an= "+v1+"+("+ann+"-1)*"+d;
+	uno=v3+d;
+	dos=uno+d;
+	tres=dos+d;
+	cuatro=tres+d;
+	cinco=cuatro+d;
+	nums.innerHTML="<b>PROGRESIÓN: </b>" +v1+ "," +v2+ ", " +v3+", " +uno+", "+dos+", "+tres+", "+cuatro+", "+cinco;
+	}
+</script>
+</body>
+</html>
